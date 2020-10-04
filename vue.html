@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<body>
+
+<div id="app">
+<div class="product">
+<div class="product-image">
+<img :src="image" ALIGN="left" width="500" height="600">
+</div>
+<div class="product-info">
+<h1 style="color:red">{{ product }}</h1>
+<p><b>***HONESTY, INTEGRITY AND RESPECT FOR PEOPLE***<b><br><br>
+COMPANY: Royal Dutch Shell PLC, commonly known as Shell<br><br>
+*HEAD QUARTERS: The Hague, Netherlands<br><br>
+*CEO: Ben van Beurden (1 Jan 2014–)<br><br>
+*FOUNDED: February 1907<br><br>
+<p v-if="SERVICES">OFFERED SEVICES</p>
+<p v-else>Out of stock<b></p>
+
+<li v-for="info in info">{{info}}</li>
+<br>
+<br>
+
+<button v-on:click="Clicks"><a href="https://www.shell.com/">VISIT US</button>
+<div class="clicks">
+<p>Clicks({{clicks}})</p>
+<div v-for="variant in variants" :key="variants.variantId">
+<p @mouseover="updateProduct(variant.variantImage)">
+{{variant.variantColor}}
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+var myObject = new Vue({
+  el: '#app',
+  data: {product: 'Royal Dutch Shell',
+  image:'image7.jpeg',
+SERVICES: true,
+info:["Shell Fuels","Engine Oils","Lubricants"],
+variants : [
+{
+variantId: 2234,
+variantColor: "HOME",
+variantImage :'image3.png '
+},
+{
+variantId :2235,
+variantColor:"ABOUT US",
+variantImage:'image6.jpg',
+}
+],
+clicks :0
+},
+methods :{
+Clicks() {
+this.clicks +=1
+},
+updateProduct(variantImage){
+this.image = variantImage
+}
+}
+})
+</script>
+
+</body>
+</html>
