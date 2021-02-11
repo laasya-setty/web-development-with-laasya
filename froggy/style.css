@@ -1,0 +1,141 @@
+
+  .container{
+    position:absolute;
+    background-color:#0081AB	;
+    width:100vmax;
+    height:100vmax;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:-1;
+    
+  }
+  .frog-body{
+    position:absolute;
+    background-color:rgb(26, 209, 20);
+    
+    width:150px;
+    height:180px;  
+    margin:auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius: 20px;
+
+   
+  }
+
+  .frog-body::after{
+    content:"";
+    position:absolute;
+    background-color:green;
+    width:110px;
+    height:120px;
+    border-radius: 20px;
+    transform: rotate(90deg);
+    top:50px;
+    left:20px;
+    z-index:2;
+  }
+
+  .left-eye,.right-eye{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    background-color:rgb(26, 209, 20) ;
+    top:-20px;  
+  }
+  .right-eye{
+    left:100px;
+  }
+   .left-eye::before,.left-eye::after{
+     position: absolute;
+     content:"";
+     width: 30px;
+     height: 30px;
+     border-radius:50%;
+     background-color: white;
+   }
+   .left-eye::before{
+     top:10px;
+     left:10px
+   }
+   .left-eye::after{
+     top:10px;
+     right:-90px;
+     z-index:1;
+   }
+
+   .right-eye::before, .right-eye::after{
+    position: absolute;
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-radius:50%;
+    background-color:black;
+   }
+
+   .right-eye::before{
+    top:15px;
+    left:-85px;
+   }
+
+   .right-eye::after{
+    z-index:1;
+    top:15px;
+    left:15px;
+   }
+
+   .left-leg,.right-leg{
+     position:absolute;
+     width: 80px;
+     height:80px ;
+     background-color: green;
+     border-radius: 15px 75px;
+     
+   }
+   .left-leg{
+    top:98px;
+    left:-35px;
+    z-index:-1;
+    transform:rotate(5deg);
+    
+   }
+   .right-leg{
+    top:98px;
+    transform:rotate(85deg);
+    right:-32px;
+    z-index:-1;
+
+   }
+
+.left-leg::before,.left-leg::after{
+  position: absolute;
+  content:"";
+  background-color:green;
+  width: 25px;
+  height: 60px;
+  border-radius: 20px;
+  transform:rotate(265deg);
+}
+.left-leg::before{
+  top:40px;
+  left:9px;
+}
+.left-leg::after{
+  top:27px;
+  right:-129px;
+}
+.mouth{
+  position: absolute;
+  background-color: red;
+  width:25px;
+  height: 25px;
+  top:25px;
+  left:62px;
+  border-radius: 0 0 150px 150px ;
+
+}
