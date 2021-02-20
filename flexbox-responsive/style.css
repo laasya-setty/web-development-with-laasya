@@ -1,0 +1,163 @@
+/*css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------------------------------*/
+*{
+    box-sizing: border-box;
+}
+/*LOGO and MENU*/
+.main-top{
+	background-color: 121013;
+	display: -webkit-box; 
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+	display: flex;
+	width:100%;
+	height:auto;
+
+}
+.logo{
+	color: white;
+	-webkit-box-flex: 1;
+-moz-box-ordinal-flex: 1;
+-ms-flex: 1; 
+flex: 1; /*so the space will be equally distributed among flex items*/
+font-size: 40px;
+padding: 15px;
+}
+
+.menu ul{
+	display: flex;
+	list-style:none;
+    flex-direction: row;
+	flex-wrap:wrap;
+	margin-top:30px;
+}
+
+.menu ul li{
+	flex:1;
+	text-align: center;
+
+}
+
+.menu ul li a{
+	color: white;
+	text-decoration:none ;
+    padding:20px;
+	
+}
+.menu ul li a:hover{
+	background-color:#262335;
+}
+
+
+/*HOME*/
+.home{
+	display:flex;
+width:100%;
+background: url("images/image1.jpg");
+background-size: cover;
+padding: 10% 0;	
+}
+.text{
+	display:flex;
+	flex-direction: column;
+	margin:auto;
+	text-align: center;
+	
+}
+.text h2{
+
+	font-size:60px;
+	color:#262335;
+	margin-bottom: 10px;
+	
+
+}
+
+/*ABOUT*/
+.about{
+	display:flex;
+	flex-wrap: wrap;
+	background-color:121013;
+    width:100%;
+	height:auto;
+	padding:15% 0;
+}
+.about p{
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: white;
+}
+
+/*BLOG*/
+.blog{
+	display:flex;
+	
+    width:100%;
+	height:auto;
+	padding:15% 0;
+	background-color: white;
+}
+.blog p{
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: white;
+}
+
+/*footer*/
+.footer{
+	display:flex;
+	flex-wrap: wrap;
+    width:100%;
+	height:auto;
+	padding:5% 0;
+	background-color:#121013;
+}
+.footer p{
+	display: flex;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: white;
+    justify-content: center;
+}
